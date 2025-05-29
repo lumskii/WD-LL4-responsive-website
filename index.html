@@ -1,16 +1,154 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>LiveLab 4 Demo</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EcoTravel</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
-</body>
 
+<!-- =============== HEADER =============== -->
+<header class="header">
+  <div class="container header__bar">
+    <h1 class="logo">EcoTravel</h1>
+
+    <!-- menu toggle (checkbox) -->
+    <input type="checkbox" id="menuToggle" class="menu-toggle">
+    <!-- hamburger icon label -->
+    <label for="menuToggle" class="menu-btn" aria-label="Toggle navigation">
+      <span class="menu-line"></span>
+    </label>
+
+    <!-- desktop navigation -->
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">Destinations</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <!-- mobile navigation: moved inside header__bar so it is a sibling of the menu toggle and label -->
+    <nav class="mobile-nav">
+      <a href="#">Home</a>
+      <a href="#">Destinations</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- =============== HERO =============== -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <h2>
+          Explore Nature's Beauty
+          <span>Responsibly</span>
+        </h2>
+        <p>
+          Discover eco-friendly destinations and sustainable travel experiences
+          that help preserve our planet while creating unforgettable memories.
+        </p>
+        <div class="hero__btns">
+          <a href="#" class="btn btn--solid">Explore Destinations</a>
+          <a href="#" class="btn btn--outline">Learn More</a>
+        </div>
+      </div>
+
+      <div class="hero__imgwrap">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=80"
+             alt="Mountain landscape">
+        <p class="img-caption">Sustainable adventures await</p>
+      </div>
+    </div>
+    <div class="fader"></div>
+  </section>
+
+  <!-- =============== DESTINATIONS =============== -->
+  <section class="dest">
+    <div class="container">
+      <div class="dest__head">
+        <h2>Eco-Friendly Destinations</h2>
+        <p>
+          Discover our carefully selected destinations that combine natural
+          beauty with sustainable practices and responsible tourism.
+        </p>
+      </div>
+
+      <div class="dest__grid">
+        <!-- card 1 -->
+        <div class="dest-card">
+          <div class="dest-card__img">
+            <img src="https://images.unsplash.com/photo-1590668443505-3a400dd59ec8?auto=format&fit=crop&w=1000&q=80"
+                 alt="Costa Rica Rainforest">
+            <div class="dest-card__overlay"></div>
+            <div class="dest-card__label">
+              <p>Costa Rica Rainforest</p>
+              <span>Monteverde, Costa Rica</span>
+            </div>
+          </div>
+          <div class="dest-card__body">
+            <p>
+              Explore sustainable lodges nestled in pristine rainforest.
+              Experience biodiversity and eco-tourism at its finest.
+            </p>
+            <a href="#" class="learn">Learn more →</a>
+          </div>
+        </div>
+
+        <!-- card 2 -->
+        <div class="dest-card">
+          <div class="dest-card__img">
+            <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1000&q=80"
+                 alt="Norwegian Fjords">
+            <div class="dest-card__overlay"></div>
+            <div class="dest-card__label">
+              <p>Norwegian Fjords</p>
+              <span>Geirangerfjord, Norway</span>
+            </div>
+          </div>
+          <div class="dest-card__body">
+            <p>
+              Discover the majestic fjords while staying in eco-lodges powered
+              by renewable energy. Perfect for hiking and kayaking.
+            </p>
+            <a href="#" class="learn">Learn more →</a>
+          </div>
+        </div>
+
+        <!-- card 3 -->
+        <div class="dest-card">
+          <div class="dest-card__img">
+            <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1000&q=80"
+                 alt="New Zealand Alps">
+            <div class="dest-card__overlay"></div>
+            <div class="dest-card__label">
+              <p>New Zealand Alps</p>
+              <span>South Island, New Zealand</span>
+            </div>
+          </div>
+          <div class="dest-card__body">
+            <p>
+              Experience sustainable alpine tourism with zero-waste
+              accommodations and guided nature walks in pristine wilderness.
+            </p>
+            <a href="#" class="learn">Learn more →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  lucide.createIcons();
+</script>
+</body>
 </html>
